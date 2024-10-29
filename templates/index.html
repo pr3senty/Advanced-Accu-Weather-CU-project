@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Central University AccuWeather project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<div class="content">
+    <h1>Сервис проверки погодных условий</h1>
+
+    {% block form %}
+    {% endblock %}
+
+    <div id="result">
+        {% block result %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

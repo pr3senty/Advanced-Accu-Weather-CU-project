@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    background: #FFF0F5;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    max-width: 700px;
+    height: 100vh;
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    background: #EFCDB8;
+    padding: 4em;
+}
+
+h1 {
+    margin-bottom: 20%;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 15px;
+    border-radius: 20px;
+    border: #ffffff00;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+
+.inp-group {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    width: 100%;
+}
+
+.inp-group > input {
+    width: 100%; 
+    margin  : 20px;
+}
+
+.red, .bad {
+    color: #FF2400;
+    font-weight: bold;
+}
+
+.good {
+    color: #34C924;
+    font-weight: bold;
+}
+
+#result {
+    line-height: 1;
+}
+
+#cities-group {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+}
+
+#cities-group > div {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    width: 100%;
+}

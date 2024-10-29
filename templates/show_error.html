@@ -1,0 +1,7 @@
+{% extends "form.html" %}
+
+{% block result %}
+{% for error in errors %}
+<p class="red">{{error}}</p>
+{% endfor %}
+{% endblock %}

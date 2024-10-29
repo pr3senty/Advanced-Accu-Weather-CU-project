@@ -1,0 +1,18 @@
+{% extends "form.html" %}
+
+{% block result %}
+
+<div class="red">
+{% if start_point|length == 0 %}
+<p>Вы забыли заполнить стартовую точку(</p>
+{% endif %}
+
+{% if end_point|length == 0 %}
+<p>Вы забыли заполнить конечную точку</p>
+{% endif %}
+
+{% if time_range|length == 0 %}
+<p>Вы забыли заполнить временной промежуток для анализа</p>
+</div>
+{% endif %}
+{% endblock %}

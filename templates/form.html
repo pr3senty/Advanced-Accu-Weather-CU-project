@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block form %}
+<p>Выезжаю</p>
+
+<datalist id="time_ranges">
+    {% for time_range in time_ranges %}
+    <option value="{{time_range}}">
+        {% endfor %}
+</datalist>
+
+<form method="post" action="/">
+    <div class="inp-group">
+        <label for="start_point">из</label>
+        <input type="text" id="start_point" name="start_point" value="{{start_point}}" placeholder="Пункт отправления">
+    </div>
+    <div class="inp-group">
+        <label for="end_point">в</label>
+        <input type="text" id="end_point" name="end_point" value="{{end_point}}" placeholder="Пункт назначения"><br>
+    </div>
+    <div class="inp-group">
+        <label for="time_range">Анализ&nbsp;cледующих</label>
+        <input list="time_ranges" id="time_range" name="time_range" value="{{time_range}}"
+               placeholder="Выберите значение">
+    </div>
+    <input type="submit" value="Проверить">
+</form>
+{% endblock %}
+
+{% block result %}
+{% endblock %}

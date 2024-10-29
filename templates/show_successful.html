@@ -1,0 +1,81 @@
+{% extends "form.html" %}
+
+{% block result %}
+
+<p>Результат:
+    <span class="{{forecast_rate}}">
+    {% if forecast_rate == 'good' %}
+    Хорошие
+    {% endif %}
+    {% if forecast_rate == 'bad' %}
+    Неблагоприятные
+    {% endif %}
+    </span>
+    условия
+</p>
+<div id="cities-group">
+<div>
+    <h3>{{start_city}}</h3>
+
+    <p>
+        Температура:
+        <span class="{{s_temperature_rate}}">
+            {{s_temperature}}°C
+        </span>
+    </p>
+
+    <p>
+        Скорость ветра:
+        <span class="{{s_wind_speed_rate}}">
+        {{s_wind_speed}} км/ч
+        </span>
+    </p>
+
+    <p>
+        Вероятность осадков:
+        <span class="{{s_precipitation_probability_rate}}">
+        {{s_precipitation_probability}}%
+        </span>
+    </p>
+
+    <p>
+        Вероятность грозы:
+        <span class="{{s_thunderstorm_probability_rate}}">
+        {{s_thunderstorm_probability}}%
+        </span>
+    </p>
+</div>
+
+<div>
+    <h3>{{end_city}}</h3>
+
+    <p>
+        Температура:
+        <span class="{{e_temperature_rate}}">
+            {{e_temperature}}°C
+        </span>
+    </p>
+
+    <p>
+        Скорость ветра:
+        <span class="{{e_wind_speed_rate}}">
+        {{e_wind_speed}} км/ч
+        </span>
+    </p>
+
+    <p>
+        Вероятность осадков:
+        <span class="{{e_precipitation_probability_rate}}">
+        {{e_precipitation_probability}}%
+        </span>
+    </p>
+
+    <p>
+        Вероятность грозы:
+        <span class="{{e_thunderstorm_probability_rate}}">
+        {{e_thunderstorm_probability}}%
+        </span>
+    </p>
+</div>
+</div>
+{% endblock %}
