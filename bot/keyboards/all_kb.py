@@ -1,5 +1,4 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, KeyboardButtonPollType, InlineQueryResult, \
-    InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
@@ -39,7 +38,7 @@ def cities_enter_inline_kb(cities_count, custom=[]):
             text = "Пункт отправления"
 
         if i == cities_count - 1:
-            text = "Пункт прибывания"
+            text = "Пункт назначения"
 
         if len(custom) == cities_count and custom[i] is not None:
             text = custom[i]
@@ -104,15 +103,3 @@ def time_range_inline_kb():
         )
 
     return builder.as_markup()
-
-def create_spec_kb():
-    kb_list = [
-        [KeyboardButton(text="Отправить гео", request_location=True)],
-        [KeyboardButton(text="Поделиться номером", request_contact=True)],
-        [KeyboardButton(text="Отправить викторину/опрос", request_poll=KeyboardButtonPollType())]
-    ]
-    keyboard = ReplyKeyboardMarkup(keyboard=kb_list,
-                                   resize_keyboard=True,
-                                   one_time_keyboard=True,
-                                   input_field_placeholder="Воспользуйтесь специальной клавиатурой:")
-    return keyboard

@@ -105,11 +105,11 @@ async def get_new_city_name(message : Message, state: FSMContext):
     cities = data.get("cities")
     cities[city_idx] = message.text
 
-    await get_city_message.delete()
-    await message.delete()
     await cities_message.edit_reply_markup(
         reply_markup=change_city_inline_kb(message.text, city_idx, cities)
     )
+    await get_city_message.delete()
+    await message.delete()
     await state.update_data(cities=cities)
     await state.set_state(Route.cities)
 
