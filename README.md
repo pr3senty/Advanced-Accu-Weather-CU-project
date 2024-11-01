@@ -6,7 +6,8 @@
 
 Перед этим
 
- .env
+-> -weather-app -> .env
+apikey=
 
  Добавить свой api ключ от AccuWeather
 
@@ -18,7 +19,8 @@
 
 Перед этим
 
-.env
+-> bot -> .env
+TOKEN=
 
 Добавить token своего бота
 
